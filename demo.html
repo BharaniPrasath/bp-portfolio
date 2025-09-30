@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bharani Prasath | Portfolio</title>
+  <style>
+    /* --- Global Styles --- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    h1, h2, h3 { margin-bottom: 15px; font-weight: 600; }
+    a { text-decoration: none; color: inherit; }
+    section { padding: 60px 20px; max-width: 1000px; margin: auto; }
+
+    /* --- Hero Section --- */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+    .hero h1 { font-size: 3rem; }
+    .hero p { font-size: 1.2rem; margin: 20px 0; }
+    .buttons a {
+      background: #ff4081;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 25px;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+    .buttons a:hover { background: #e91e63; }
+
+    /* --- About --- */
+    .about { text-align: center; }
+    .about p { max-width: 700px; margin: auto; }
+
+    /* --- Skills --- */
+    .skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+    }
+    .skills li {
+      background: #eee;
+      margin: 10px;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* --- Projects --- */
+    .projects .project-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .projects a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #667eea;
+      font-weight: 500;
+    }
+
+    /* --- Education & Experience --- */
+    .timeline-item { margin-bottom: 20px; }
+    .timeline-item h3 { color: #667eea; }
+
+    /* --- Contact --- */
+    .contact { text-align: center; }
+    .contact a { color: #667eea; font-weight: 500; }
+
+    /* --- Footer --- */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: white;
+      margin-top: 40px;
+    }
+
+    @media(max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .hero p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Hi, I'm <span style="color:#ffcc70;">Bharani Prasath</span></h1>
+    <p>Full Stack Developer (Django + React) | Creating Scalable & User-Friendly Web Apps</p>
+    <div class="buttons">
+      <a href="#projects">View Projects</a>
+      <a href="resume.pdf" target="_blank">Download Resume</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <p>
+      Motivated B.Com IT graduate specialized in <b>Python Full Stack Development (Django + React)</b>.
+      Skilled in building responsive web applications, Django-based backends, and scalable user interfaces.
+      Passionate about solving problems with clean code and user-friendly design.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills" id="skills">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li>Python</li><li>Django</li><li>React</li><li>JavaScript (ES6)</li>
+      <li>MySQL</li><li>REST APIs</li><li>HTML</li><li>CSS</li>
+      <li>Bootstrap</li><li>C</li><li>C++</li><li>Java</li>
+      <li>Git & GitHub</li><li>Postman</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>E-Commerce Web Application (React & Django)</h3>
+      <p>
+        Developed a full-stack e-commerce platform with user and seller modules, product browsing,
+        cart management, wishlist, and secure authentication.
+        Designed with React, Bootstrap, and CSS, integrated Django backend for user management and order handling.
+      </p>
+      <a href="https://react-project-woad-delta.vercel.app/" target="_blank">🔗 View Live Project</a>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="experience" id="experience">
+    <h2>Experience</h2>
+    <div class="timeline-item">
+      <h3>LITZ Technologies (Internship, 2024)</h3>
+      <p>
+        Contributed to front-end development using HTML, CSS, and JavaScript, creating user-friendly interfaces.
+        Supported back-end with PHP-MySQL, optimizing data storage and retrieval processes.
+      </p>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="education" id="education">
+    <h2>Education</h2>
+    <div class="timeline-item">
+      <h3>B.Com IT – Dr G R Damodaran College of Science (2022–2025)</h3>
+      <p>Scored 75%</p>
+    </div>
+    <div class="timeline-item">
+      <h3>HSC – AVP Trust Matriculation Higher Secondary School (2020–2022)</h3>
+      <p>Scored 88.3%</p>
+    </div>
+    <div class="timeline-item">
+      <h3>SSLC – Maruthi Excel Matriculation Higher Secondary School (2019–2020)</h3>
+      <p>Scored 89%</p>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section class="certificates" id="certificates">
+    <h2>Certificates</h2>
+    <ul>
+      <li>Python Full Stack Development – Career Ladder</li>
+      <li>C and C++ Certificate – TCDS</li>
+      <li>Introduction to Cyber Security – Cisco</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:bharaniprasath6380@gmail.com">bharaniprasath6380@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/bharaniprasath" target="_blank">linkedin.com/in/bharaniprasath</a></p>
+    <p>Phone: +91 9994251829</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Bharani Prasath | Built with ❤️ using HTML & CSS</p>
+  </footer>
+
+</body>
+</html>
