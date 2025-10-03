@@ -23,7 +23,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -96,10 +95,13 @@ body {
 
 /* home */
 .home {
-    padding: 300px 40px 70px 40px;
+
+    min-height: 100vh;
+    padding: 0 40px;
+    padding-bottom: 120px;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: end;
 }
 
 .home .name {
@@ -144,8 +146,10 @@ body {
 /* about */
 .about-container {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: 20px;
+    min-height: 100vh;
     padding: 0 40px;
     padding-top: 50px;
 }
@@ -164,10 +168,6 @@ body {
     line-height: 29px;
 }
 
-/* --- Skills --- */
-.skills {
-    /* margin-bottom: 100px; */
-}
 
 .myskills ul {
     display: flex;
@@ -197,8 +197,11 @@ body {
 /* project */
 /* --- Projects --- */
 .projects {
-    padding: 70px 40px;
-    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0 40px;
+    padding-top: 60px;
 }
 
 .projects h2 {
@@ -260,8 +263,12 @@ body {
 
 /* Contact */
 .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
     padding: 0 40px;
-    padding-top: 60px;
+    padding-top: 50px;
 }
 
 .contact h2 {
@@ -316,11 +323,6 @@ body {
     margin-top: 0;
 }
 
-.info-box p {
-    color: #2b2b2b;
-    position: relative;
-    text-decoration: none;
-}
 
 .info-box p::after {
     content: "";
@@ -418,18 +420,18 @@ body {
 
 /* footer */
 .footer {
-    background-color: #b885e7;
-    position: relative;
-    padding: 50px 160px 20px 160px;
     display: flex;
     align-items: center;
     font-weight: 600;
+    padding: 30px 40px;
+    padding-top: 50px;
+    background-color: #b885e7;
 }
 
 .footer .footer-container {
     display: flex;
     align-items: start;
-    gap: 200px;
+    justify-content: space-between;
     width: 100%;
 }
 
@@ -439,13 +441,13 @@ body {
     align-items: center;
     gap: 10px;
     font-weight: 600;
+    width: 300px;
 }
 
 .footer-left span {
     font-weight: bold;
     color: #fff;
     font-size: 30px;
-    width: 240px;
 }
 
 /* footer - center */
@@ -453,11 +455,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 23px;
+    padding-top: 10px;
+    gap: 3px;
     color: #fff;
-    padding-top: 15px;
-    /* width: 500px; */
-
 }
 
 .footer-center div:first-child {
@@ -479,38 +479,21 @@ body {
 }
 
 a {
-    position: relative;
     color: black;
     text-decoration: none;
-    /* remove default underline */
 }
 
-.footer-container div:first-child a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0;
-    height: 2px;
-    background-color: #fff;
-    transition: width 0.3s ease-in;
-}
-
-.footer-container div:first-child a:hover::after {
-    width: 100%;
-}
 
 
 
 
 /* footer right */
 .footer-right {
-    position: absolute;
-    right: 30px;
-    bottom: 50px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: end;
+    justify-content: end;
+    padding-top: 20px;
+    width: 200px;
 }
 
 .footer-right a {
@@ -543,7 +526,7 @@ a {
 
     /* home */
     .home {
-        padding: 300px 40px 250px 40px;
+        padding-top: 260px;
     }
 
     .home h2 {
@@ -755,26 +738,39 @@ a {
 
     .footer-container {
         flex-direction: column;
+        position: relative;
     }
 
-    .footer-container .footer-center {
+
+    .footer-container .footer-center a {
         padding-top: 0;
-        align-items: start;
         width: 100%;
         gap: 10px;
+        font-size: 12px;
     }
 
     .footer-center div:first-child {
         gap: 50px;
         font-size: 17px;
     }
+
+    .footer-right {
+        position: absolute;
+        right: 10px;
+        bottom: 20px;
+        width: auto;
+        flex: 1;
+    }
 }
 
 
 
 
-@media (max-width: 520px) {
+
+@media (max-width: 522px) {
     .navbar {
+        overflow: hidden;
+        max-width: 100vh;
         padding: 7px 9px;
     }
 
@@ -785,7 +781,7 @@ a {
     }
 
     .brand-name {
-        font-size: 13px;
+        font-size: 14px;
         font-weight: normal;
     }
 
@@ -795,15 +791,14 @@ a {
 
     .navbar2 a {
         padding: 8px;
-        font-size: 10px;
+        font-size: 12px;
     }
 
     /* home */
     .home {
         padding: 0 10px;
-        padding-top: 400px;
-        padding-bottom: 50px;
-
+        padding-top: 250px;
+        align-items: center;
     }
 
     .home h2 {
@@ -849,14 +844,32 @@ a {
     .contact {
         padding: 40px 10px;
     }
-    .contact-container{
+
+    .contact-container {
         padding: 10px 20px;
     }
 
     /* footer */
-    .footer-right{
-        right: 20px;
+    .footer-container {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .footer-container .footer-left {
+        width: auto;
+    }
+
+    .footer-center {
+        padding-top: 0 !important;
+        flex: 2;
+    }
+
+    .footer-right {
+        position: absolute;
+        right: 10px;
         bottom: 20px;
+        width: auto;
+        flex: 1;
     }
 
 }
